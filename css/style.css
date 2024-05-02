@@ -5,10 +5,12 @@
 }
 
 :root {
+    --theme-color--: #1d64c1;
     --danger-color--: #ff0000;
     --black-color--: #000;
     --white-color--: #fff;
     --success-color--: #00ff00;
+    --whitesmoke-color--: #f5f5f5;
 }
 
 /* Common Properties */
@@ -104,5 +106,121 @@ img {
     width: 16.66%;
 }
 
+body {
+    font-family: sans-serif;
+    font-size: 100%;
+}
+
 
 /* HEADER */
+
+header {
+    background-color: var(--theme-color--);
+}
+
+.logo {
+    margin-block: 15px;
+}
+
+nav ul li a,
+.logo p {
+    margin-inline: 12px;
+    color: var(--white-color--);
+    font-weight: 600;
+    transition: all 0.3s linear;
+}
+
+nav ul li a:hover{
+    color: var(--danger-color--);
+}
+
+.topBar {
+    background-color: #003d6f;
+    color: var(--white-color--);
+}
+
+.location span {
+    display: inline-block;
+    margin-block: 4px;
+}
+
+.contact-detail span {
+    display: inline-block;
+    margin-inline: 12px;
+}
+
+.contact-detail span a {
+    color: var(--white-color--);
+}
+
+
+/* Doctors */
+
+.doctors {
+    background-color: var(--whitesmoke-color--);
+}
+
+.doctor-title h2,
+.appointment-title h2,
+.reviews-title h2,
+.feedback-title h2 {
+    font-size: 30px;
+    color: var(--theme-color--);
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.doctor-title h2::after,
+.appointment-title h2::after,
+.reviews-title h2::after,
+.feedback-title h2::after {
+    content: "";
+    width: 100px;
+    height: 5px;
+    background-color: var(--danger-color--);
+    position: absolute;
+    bottom: -10px;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 10px;
+}
+
+.doctor-item {
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px 3px gray;
+    margin: 12px;
+    overflow: hidden;
+}
+
+.doctor-image img {
+    width: 100%;
+    height: 250px;
+}
+
+.doctor-content {
+    background-color: var(--theme-color--);
+    padding: 10px;
+    text-align: center;
+    border-top: 1.5px solid #000;
+}
+
+.doctor-content h3 {
+    color: var(--white-color--);
+}
+
+.doctor-content p {
+    color: var(--white-color--);
+    margin-block: 10px;
+}
+
+.doctor-content span {
+    color: var(--white-color--);
+}
+
+
+/* FOOTER */
+footer{
+    background-color: var(--theme-color--);
+}
